@@ -1,0 +1,15 @@
+Here is a bash script that determines the years in which Christmas Eve falls on a Sunday:
+
+#!/bin/bash
+
+for year in {1901..2099}
+do
+    if [[ $(date -d "${year}-12-24" +%A) == "Sunday" ]]
+    then
+        echo "$year"
+    fi
+done
+
+This script uses the date command to check the day of the week for December 24th of each year between 1901 and 2099. If the day is Sunday, the year is printed to the console. You can modify the range of years by changing the values in the curly braces.
+
+I hope this helps! Let me know if you have any other questions.
